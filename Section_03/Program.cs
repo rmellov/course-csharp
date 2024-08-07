@@ -9,6 +9,9 @@
             // Exercise_03();
             // Exercise_04();
             // Exercise_05();
+            // Exercise_06();
+            // Exercise_07();
+            // Exercise_08();
         }
 
         static void Exercise_01()
@@ -64,5 +67,52 @@
             valorTotal = numeroPeca1 * valorUnitarioPeca1 + numeroPeca2 * valorUnitarioPeca2;
             Console.WriteLine("VALOR A PAGAR: R$ {0}", valorTotal.ToString("F2"));
         }
+
+        static void Exercise_06()
+        {
+            int numero = int.Parse(Console.ReadLine());
+
+            if (numero < 0)
+                Console.WriteLine("NEGATIVO");
+            else
+                Console.WriteLine("NAO NEGATIVO");
+        }
+
+        static void Exercise_07()
+        {
+            int numero = int.Parse(Console.ReadLine());
+
+            if (numero % 2 == 0)
+                Console.WriteLine("PAR");
+            else
+                Console.WriteLine("IMPAR");
+        }
+
+        static void Exercise_08()
+        {
+            int numA, numB, menor, maior;
+            string[] vet = Console.ReadLine().Split(' ');
+            numA = int.Parse(vet[0]);
+            numB = int.Parse(vet[1]);
+
+            if (numA > numB)
+            {
+                maior = numA;
+                menor = numB;
+            }
+            else
+            {
+                maior = numB;
+                menor = numA;
+            }
+
+            if (maior % menor == 0)
+                Console.WriteLine("Sao Multiplos");
+            else
+            {
+                Console.WriteLine("Nao sao Multiplos");
+            }
+        }
+
     }
 }
